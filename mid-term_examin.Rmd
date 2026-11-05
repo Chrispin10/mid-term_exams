@@ -42,24 +42,56 @@ head (populations)
 ##Variable Names
 ```{r}
 names(populations)
+names(co2)
 ```
-##too 5 rows
+##top 5 rows
 
 ```{r}
-head(populations)
+head(populations,5)
 ```
 ## down Row 
 
 ```{r}
-tail(populations)
+tail(populations,5)
+
 ```
 ## data types 
 ```{r}
 str(populations)
+str(co2)
 ```
 ##duplicated 
 
 ```{r}
 duplicated(populations)
 ```
+
+##Shape of Dataset
+
+```{r}
+`dim(populations)
+nrow(populations)
+ncol(populations)`
+```
+##duplicate data 
+```{r}
+duplicated(populations)
+```
+```{r}
+
+```
+
+```{r}
+sum(duplicated(populations))
+```
+## Missing Values Per Column
+```{r}
+is.na(populations)
+
+```
+```{r}
+colSums(is.na(populations))
+```
+
+
 
