@@ -111,6 +111,7 @@ las = 2
 )
 ```
 ##Remove Extreme Outlier
+
 ```{r}
 remove_outliers <- function(x){
 Q1 <- quantile(x,0.25)
@@ -123,6 +124,7 @@ return(x)
 population_clean <- populations %>%
 mutate(across(where(is.numeric),
 remove_outliers))
+
 ```
 ```{r}
 population_clean <- populations %>%
