@@ -92,6 +92,22 @@ is.na(populations)
 ```{r}
 colSums(is.na(populations))
 ```
+##Handle Missing Values
+```{r}
+populations <- populations %>%
+mutate(across(where(is.character)
+~ ifelse(is.na(.), "Unknown", .)))
+```
+
+```{r}
+numeric_cols <- populations %>%
+select(where(is.numeric))
+boxplot(
+numeric_cols,
+main = "Boxplot of Numeric Variables",
+las = 2
+)
+```
 
 
 
